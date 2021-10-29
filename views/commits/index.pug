@@ -1,0 +1,15 @@
+html
+    head
+        title='Pug - Commits index'
+        body
+        h1= 'Twenty fife commits for repo node js'
+        h2= 'List sha'
+        div
+            ol
+              each commit in commits
+                  li= 'sha' + '-' + commit.sha
+        h2= 'List Message commit'
+        div
+            ol
+              each commit in commits
+                  li= 'message' + '-' + commit.commit.message
